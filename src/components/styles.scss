@@ -1,0 +1,60 @@
+.header{
+    width: 100%;
+    margin: 1%; 
+    &_container{
+        padding-bottom: 0;
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        &_buttons{
+            display: flex;
+            justify-content: space-between;
+            width: 20%;
+            &_button{
+                padding: 8px 15px;
+                color: white;
+                border-radius: 8px;
+                border-width: 2px; 
+                background-color: darkblue;
+            }
+        }
+        &_hr{
+            margin-top: 0;
+        }
+    }
+}
+
+.body{    
+    width: 90%;
+    margin: auto;
+    margin-top: 2vh;
+    justify-content: space-between;
+    display:flex;
+    flex-flow: row wrap;
+    &_form{
+        margin: 1%;
+        &_sku{
+            display:flex;
+            flex-direction: row;
+        }
+    }
+    &_card{
+        width: 16%;
+        margin:1%;
+        padding: 10px;
+        border: 2px solid;
+        border-radius: 20px;
+        &_info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.notification{
+    color: red;
+    margin-left: 20px; 
+}

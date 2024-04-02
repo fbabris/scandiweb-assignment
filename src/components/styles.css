@@ -1,0 +1,60 @@
+.header {
+  width: 100%;
+  margin: 1%;
+}
+.header_container {
+  padding-bottom: 0;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_container_buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+.header_container_buttons_button {
+  padding: 8px 15px;
+  color: white;
+  border-radius: 8px;
+  border-width: 2px;
+  background-color: darkblue;
+}
+.header_container_hr {
+  margin-top: 0;
+}
+
+.body {
+  width: 90%;
+  margin: auto;
+  margin-top: 2vh;
+  justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+}
+.body_form {
+  margin: 1%;
+}
+.body_form_sku {
+  display: flex;
+  flex-direction: row;
+}
+.body_card {
+  width: 16%;
+  margin: 1%;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+.body_card_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notification {
+  color: red;
+  margin-left: 20px;
+}/*# sourceMappingURL=styles.css.map */

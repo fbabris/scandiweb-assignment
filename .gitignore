@@ -10,8 +10,10 @@
 
 # production
 /build
+/vendor
 
 # misc
+config.ini
 .DS_Store
 .env.local
 .env.development.local
