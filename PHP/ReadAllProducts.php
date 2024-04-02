@@ -43,12 +43,10 @@ class ReadAllProducts extends DbCon
             }
             return $jsonProducts;
         } catch (Exception $e) {
-            // Handle the exception (e.g., log the error, return an error response)
             return "Error: " . $e->getMessage();
         }
     }
 
-    // Getter methods to retrieve product properties
     public function getProductId($product)
     {
         return $product['product_id'];
