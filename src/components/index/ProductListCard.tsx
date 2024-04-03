@@ -35,7 +35,7 @@ const ProductListCard = ({ product }:ProductListCardProps) => {
     }
 
     try {
-      const response = await fetch("http://localhost:80/scandiweb-assignment/PHP/deleteController.php", {
+      const response = await fetch("./PHP/deleteController.php", {
         method: 'POST',
         mode: 'cors',
         credentials: 'include',

@@ -65,7 +65,7 @@ const AddProductForm: React.FC = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:80/scandiweb-assignment/PHP/saveController.php", {
+      const response = await fetch("./PHP/saveController.php", {
         method: 'POST',
         mode: 'cors',
         credentials: 'include',
@@ -90,7 +90,8 @@ const AddProductForm: React.FC = () => {
       <AddProductHeader handleSubmitClick={handleSubmitClick} />
         <form 
           onSubmit={handleSubmit} 
-          ref={formRef} 
+        ref={formRef}
+        id='product_form'
         method="post"
         className='body_form'
         >
@@ -130,7 +131,7 @@ const AddProductForm: React.FC = () => {
           </div>
           <div>
             <label htmlFor='type'>Type:</label>
-            <select name="type" id="type" onChange={handleSelect} required>
+            <select name="type" id="productType" onChange={handleSelect} required>
               <option />
               <option value="furniture">Furniture</option>
               <option value="book">Book</option>

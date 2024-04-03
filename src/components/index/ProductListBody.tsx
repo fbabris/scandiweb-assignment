@@ -21,7 +21,7 @@ const ProductListBody = () => {
   };
 
   const fetchProducts = (): void => {
-    fetch('http://localhost:80/scandiweb-assignment/PHP/readController.php', {
+    fetch('./PHP/readController.php', {
       method: 'POST',
       mode: 'cors',
       credentials: 'include'
@@ -33,20 +33,19 @@ const ProductListBody = () => {
     }).then((data: any[]) => {
       const transformedProducts: Product[] = data.map(product => {
         let additionalInfo: string = '';
-        if (product.type === 'book') {
+        if (product.type === 'book' && product.book_weight !== null) {
           additionalInfo = `Weight: ${product.book_weight}`;
-        } else if (product.type === 'dvd') {
+        } else if (product.type === 'dvd' && product.dvd_size !== null) {
           additionalInfo = `Size: ${product.dvd_size}`;
-        } else if (product.type === 'furniture') {
+        } else if (product.type === 'furniture' && product.furniture_height !== null && product.furniture_width !== null && product.furniture_length !== null) {
           additionalInfo = `Dimensions: ${product.furniture_height}x${product.furniture_width}x${product.furniture_length}`;
         }
-  
         return {
           id: product.product_id,
           sku: product.sku,
           name: product.name,
           price: product.price,
-          type: product.type.charAt(0).toUpperCase() + product.type.slice(1),
+          type: product.type,
           additionalInfo
         };
       });

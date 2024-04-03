@@ -9,8 +9,8 @@ const AddProductHeader: React.FC<{handleSubmitClick: (e: React.MouseEvent<HTMLBu
             <div className='header_container'>
             <h2>Add Product</h2>
             <div className="header_container_buttons">
-                <button type="button" className='header_container_buttons_button' onClick={handleSubmitClick}>SAVE</button>
-                <Link to ="/"><button type="button" className='header_container_buttons_button' id='delete-product-btn'>CANCEL</button></Link>
+                <button type="button" className='header_container_buttons_button' onClick={handleSubmitClick}>Save</button>
+                <Link to ="/"><button type="button" className='header_container_buttons_button' id='delete-product-btn'>Cancel</button></Link>
             </div>
             </div>
             <hr className="header_hr" />
